@@ -1,0 +1,762 @@
+CRITICAL - 2022-11-28 05:03:15 --> syntax error, unexpected token ",", expecting identifier or variable or "{" or "$"
+in APPPATH\Controllers\DivisiController.php on line 86.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\DivisiController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DivisiController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DivisiController')
+ 4 SYSTEMPATH\CodeIgniter.php(852): class_exists('\\App\\Controllers\\DivisiController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 05:17:59 --> Undefined array key "divisi_id"
+in APPPATH\Views\pembimbing\divisi\assign.php on line 25.
+ 1 APPPATH\Views\pembimbing\divisi\assign.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "divisi_id"', 'APPPATH\\Views\\pembimbing\\divisi\\assign.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pembimbing\\divisi\\assign.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('pembimbing/divisi/assign', [], true)
+ 5 APPPATH\Controllers\DivisiController.php(92): view('pembimbing/divisi/assign', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\DivisiController->setDivisi('63')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DivisiController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 05:29:08 --> syntax error, unexpected token ")"
+in APPPATH\Controllers\DivisiController.php on line 82.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\DivisiController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DivisiController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DivisiController')
+ 4 SYSTEMPATH\CodeIgniter.php(852): class_exists('\\App\\Controllers\\DivisiController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 05:29:16 --> Too few arguments to function App\Models\Divisi::quotaDivisi(), 0 passed in D:\SIMAG-2.0\app\Controllers\DivisiController.php on line 80 and exactly 1 expected
+in APPPATH\Models\Divisi.php on line 66.
+ 1 APPPATH\Controllers\DivisiController.php(80): App\Models\Divisi->quotaDivisi()
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\DivisiController->setDivisi('63')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DivisiController))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:37:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.*, `divisi`.*
+FROM `divisi`
+JOIN `info_peserta` ON `divisi`.`id` = `info_pesert' at line 1 in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_pe...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_pe...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_pe...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_pe...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\UserModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:37:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.*, `divisi`.*
+FROM `divisi`
+JOIN `info_peserta` ON `divisi`.`id` = `info_pesert' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id info_peserta`.*, `divisi`.*
+FROM `divisi`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id info_peserta`.*, `divisi`.*
+FROM `divisi`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id info_peserta`.*, `divisi`.*
+FROM `divisi`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id info_peserta`.*, `divisi`.*
+FROM `divisi`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\UserModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:38:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.*, `divisi`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`' at line 1 in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_pe...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_pe...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_pe...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_pe...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\UserModel.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:38:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.*, `divisi`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id info_peserta`.*, `divisi`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id info_peserta`.*, `divisi`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id info_peserta`.*, `divisi`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id info_peserta`.*, `divisi`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\UserModel.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:39:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.*, `divisi`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`' at line 1 in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_pe...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_pe...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_pe...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_pe...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\UserModel.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:39:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.*, `divisi`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id info_peserta`.*, `divisi`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id info_peserta`.*, `divisi`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id info_peserta`.*, `divisi`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id info_peserta`.*, `divisi`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\UserModel.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:39:26 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `inf' at line 1 in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_pe...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_pe...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_pe...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_pe...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:39:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `inf' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id as divisi_id user`.`id` as `user_id info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id as divisi_id user`.`id` as `user_id info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id as divisi_id user`.`id` as `user_id info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id as divisi_id user`.`id` as `user_id info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:39:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `inf' at line 1 in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_pe...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_pe...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_pe...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_pe...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:39:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `inf' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id as divisi_id user`.`id` as `user_id info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id as divisi_id user`.`id` as `user_id info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id as divisi_id user`.`id` as `user_id info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id as divisi_id user`.`id` as `user_id info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:40:16 --> mysqli_sql_exception: Not unique table/alias: 'info_peserta' in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_pe...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_pe...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_pe...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_pe...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:40:16 --> Not unique table/alias: 'info_peserta'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:40:53 --> mysqli_sql_exception: Not unique table/alias: 'info_peserta' in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_pe...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_pe...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_pe...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_pe...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:40:53 --> Not unique table/alias: 'info_peserta'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:41:03 --> mysqli_sql_exception: Not unique table/alias: 'info_peserta' in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `divisi`...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `divisi`...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `divisi`...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `divisi`...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:41:03 --> Not unique table/alias: 'info_peserta'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:41:11 --> mysqli_sql_exception: Not unique table/alias: 'info_peserta' in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `divisi`...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `divisi`...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `divisi`...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `divisi`...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:41:11 --> Not unique table/alias: 'info_peserta'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `divisi`.`id` = `info_peserta`.`divisi`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:41:30 --> mysqli_sql_exception: Unknown table 'divisi' in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_pe...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_pe...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_pe...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_pe...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:41:30 --> Unknown table 'divisi'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+JOIN `info_peserta` ON `user`.`id` = `info_peserta`.`userId`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:45:38 --> mysqli_sql_exception: Unknown table 'info_peserta' in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_pe...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_pe...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_pe...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_pe...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:45:38 --> Unknown table 'info_peserta'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `user`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:47:47 --> mysqli_sql_exception: Unknown column 'info_peserta.divisi' in 'on clause' in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `divisi`...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `divisi`...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `divisi`...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `divisi`...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:47:47 --> Unknown column 'info_peserta.divisi' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `divisi`.*, `user`.*
+FROM `user`
+JOIN `divisi` ON `info_peserta`.`divisi` = `divisi`.`id`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `divisi`.*, `user`.*
+FROM `user`
+JOIN `divisi` ON `info_peserta`.`divisi` = `divisi`.`id`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `divisi`.*, `user`.*
+FROM `user`
+JOIN `divisi` ON `info_peserta`.`divisi` = `divisi`.`id`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `divisi`.*, `user`.*
+FROM `user`
+JOIN `divisi` ON `info_peserta`.`divisi` = `divisi`.`id`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\UserModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(64): App\Models\UserModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 05:50:34 --> Call to undefined method App\Models\UserModel::getUserDivisi
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Pembimbing.php(65): CodeIgniter\Model->__call('getUserDivisi', [])
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 05:50:57 --> mysqli_sql_exception: Unknown table 'divisi' in D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_pe...', 0)
+#1 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_pe...')
+#2 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_pe...')
+#3 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_pe...', Array, false)
+#4 D:\SIMAG-2.0\app\Models\InfoPesertaModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SIMAG-2.0\app\Controllers\Pembimbing.php(65): App\Models\InfoPesertaModel->getUserDivisi()
+#6 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+#7 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+#8 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SIMAG-2.0\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\SIMAG-2.0\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\SIMAG-2.0\\pu...')
+#11 {main}
+CRITICAL - 2022-11-28 05:50:57 --> Unknown table 'divisi'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `info_peserta`
+JOIN `user` ON `info_peserta`.`userId` = `user`.`id`
+WHERE `role` = 3
+AND `status` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `info_peserta`
+JOIN `user` ON `info_peserta`.`userId` = `user`.`id`
+WHERE `role` = 3
+AND `status` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `info_peserta`
+JOIN `user` ON `info_peserta`.`userId` = `user`.`id`
+WHERE `role` = 3
+AND `status` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `info_peserta`.`id` as `peserta_id`, `divisi`.`id` as `divisi_id`, `user`.`id` as `user_id`, `info_peserta`.*, `divisi`.*, `user`.*
+FROM `info_peserta`
+JOIN `user` ON `info_peserta`.`userId` = `user`.`id`
+WHERE `role` = :role:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\InfoPesertaModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembimbing.php(65): App\Models\InfoPesertaModel->getUserDivisi()
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 05:55:22 --> Cannot use object of type stdClass as array
+in APPPATH\Views\pembimbing\datapeserta.php on line 77.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('pembimbing/datapeserta.php', [], true)
+ 4 APPPATH\Controllers\Pembimbing.php(78): view('pembimbing/datapeserta.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 07:28:43 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\dompdf\dompdf\src\Helpers.php on line 578.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-11-28 07:34:42 --> Cannot use object of type stdClass as array
+in APPPATH\Views\pembimbing\datapeserta.php on line 87.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('pembimbing/datapeserta.php', [], true)
+ 4 APPPATH\Controllers\Pembimbing.php(78): view('pembimbing/datapeserta.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 07:35:15 --> Cannot use object of type stdClass as array
+in APPPATH\Views\pembimbing\datapeserta.php on line 87.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('pembimbing/datapeserta.php', [], true)
+ 4 APPPATH\Controllers\Pembimbing.php(78): view('pembimbing/datapeserta.php', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 07:37:17 --> Invalid file: nama/file.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('nama/file.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('nama/file', [], true)
+ 3 APPPATH\Controllers\DivisiController.php(17): view('nama/file', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\DivisiController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DivisiController))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 07:37:27 --> Invalid file: nama/file.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('nama/file.php')
+ 2 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('nama/file', [], true)
+ 3 APPPATH\Controllers\DivisiController.php(17): view('nama/file', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\DivisiController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DivisiController))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 07:42:06 --> Call to undefined method App\Models\InfoPesertaModel::getUserDivisi
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Pembimbing.php(65): CodeIgniter\Model->__call('getUserDivisi', [])
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 07:42:32 --> Undefined array key "peserta_id"
+in APPPATH\Views\pembimbing\datapeserta.php on line 91.
+ 1 APPPATH\Views\pembimbing\datapeserta.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "peserta_id"', 'APPPATH\\Views\\pembimbing\\datapeserta.php', 91)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pembimbing\\datapeserta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('pembimbing/datapeserta.php', [], true)
+ 5 APPPATH\Controllers\Pembimbing.php(77): view('pembimbing/datapeserta.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->dataPeserta()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 07:43:14 --> Class "App\Controllers\UserModel" not found
+in APPPATH\Controllers\DivisiController.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\DivisiController->setDivisi('63')
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DivisiController))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 07:56:13 --> Undefined array key 0
+in APPPATH\Views\peserta\statuspengajuan.php on line 12.
+ 1 APPPATH\Views\peserta\statuspengajuan.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\peserta\\statuspengajuan.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\peserta\\statuspengajuan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('peserta/statuspengajuan.php', [], true)
+ 5 APPPATH\Controllers\Notif.php(123): view('peserta/statuspengajuan.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Notif->dataPengajuan('102')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notif))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 07:56:50 --> Undefined array key 0
+in APPPATH\Views\peserta\statuspengajuan.php on line 12.
+ 1 APPPATH\Views\peserta\statuspengajuan.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\peserta\\statuspengajuan.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\peserta\\statuspengajuan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('peserta/statuspengajuan.php', [], true)
+ 5 APPPATH\Controllers\Notif.php(123): view('peserta/statuspengajuan.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Notif->dataPengajuan('102')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notif))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

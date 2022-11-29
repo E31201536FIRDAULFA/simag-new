@@ -1,0 +1,55 @@
+CRITICAL - 2022-11-23 06:09:28 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\Dev\SIMAG\app\Config\Routes.php on line 61 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(61): CodeIgniter\Router\RouteCollection->get('data/pesertaPembimbing::dataPeserta')
+ 2 SYSTEMPATH\Router\RouteCollection.php(637): CodeIgniter\CodeIgniter->Config\{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 3 APPPATH\Config\Routes.php(65): CodeIgniter\Router\RouteCollection->group('pembimbing', [...], Object(Closure))
+ 4 SYSTEMPATH\Router\RouteCollection.php(637): CodeIgniter\CodeIgniter->Config\{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 5 APPPATH\Config\Routes.php(72): CodeIgniter\Router\RouteCollection->group('dashboard', [...], Object(Closure))
+ 6 SYSTEMPATH\CodeIgniter.php(764): require('APPPATH\\Config\\Routes.php')
+ 7 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-23 08:22:19 --> Trying to access array offset on value of type null
+in APPPATH\Views\pembimbing\detailpeserta.php on line 27.
+ 1 APPPATH\Views\pembimbing\detailpeserta.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\pembimbing\\detailpeserta.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pembimbing\\detailpeserta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('pembimbing/detailpeserta', [], true)
+ 5 APPPATH\Controllers\Pembimbing.php(125): view('pembimbing/detailpeserta')
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->detailPeserta('38')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-23 08:23:51 --> Trying to access array offset on value of type null
+in APPPATH\Views\pembimbing\detailpeserta.php on line 27.
+ 1 APPPATH\Views\pembimbing\detailpeserta.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\pembimbing\\detailpeserta.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pembimbing\\detailpeserta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('pembimbing/detailpeserta', [], true)
+ 5 APPPATH\Controllers\Pembimbing.php(126): view('pembimbing/detailpeserta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->detailPeserta('38')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-23 08:23:58 --> Trying to access array offset on value of type null
+in APPPATH\Views\pembimbing\detailpeserta.php on line 27.
+ 1 APPPATH\Views\pembimbing\detailpeserta.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\pembimbing\\detailpeserta.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pembimbing\\detailpeserta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('pembimbing/detailpeserta', [], true)
+ 5 APPPATH\Controllers\Pembimbing.php(126): view('pembimbing/detailpeserta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Pembimbing->detailPeserta('38')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembimbing))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-23 15:15:52 --> authGuardPeserta filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('authGuardPeserta')
+ 2 SYSTEMPATH\CodeIgniter.php(422): CodeIgniter\Filters\Filters->enableFilter('authGuardPeserta', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

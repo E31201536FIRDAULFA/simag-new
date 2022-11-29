@@ -1,0 +1,6 @@
+CRITICAL - 2022-11-22 00:15:39 --> Call to protected App\Controllers\Notif::__construct() from scope CodeIgniter\CodeIgniter
+in SYSTEMPATH\CodeIgniter.php on line 864.
+ 1 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
