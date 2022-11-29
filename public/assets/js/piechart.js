@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
 var chartDiv = $("#barChart");
-$.get('/Peserta/getKehadiran',(data)=>{
+$.get('/dashboard/peserta/kehadiran',(data)=>{
 var myChart = new Chart(chartDiv, {
     type: 'pie',
     data: {

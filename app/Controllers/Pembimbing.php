@@ -85,14 +85,14 @@ class Pembimbing extends BaseController
             'status' => 2
         ];
         $userModel->update($id, $data);
-        return redirect()->to(base_url('Pembimbing/dataPeserta'));
+        return redirect()->to(base_url('dashboard/pembimbing/data/peserta'));
     }
 
     public function hapusPeserta($id)
     {
         $userModel = new UserModel();
         $userModel->where('id', $id)->delete();
-        return redirect()->to(base_url('Pembimbing/dataPeserta'));
+        return redirect()->to(base_url('dashboard/pembimbing/data/peserta'));
     }
 
     public function terimaPesertaDash($id)
@@ -102,14 +102,14 @@ class Pembimbing extends BaseController
             'status' => 2
         ];
         $userModel->update($id, $data);
-        return redirect()->to(base_url('Pembimbing'));
+        return redirect()->to(base_url('dashboard/pembimbing/data/peserta'));
     }
 
     public function hapusPesertaDash($id)
     {
         $userModel = new UserModel();
         $userModel->where('id', $id)->delete();
-        return redirect()->to(base_url('Pembimbing'));
+        return redirect()->to(base_url('dashboard/pembimbing/data/peserta'));
     }
 
     public function detailPeserta($id)
@@ -192,7 +192,7 @@ class Pembimbing extends BaseController
             'status' => 2
         ];
         $aktivitasModel->update($id, $data);
-        return redirect()->to(base_url('Pembimbing/dataAktivitas'));
+        return redirect()->to(base_url('dashboard/pembimbing/data/aktivitas'));
     }
 
     public function hapusAktivitas($id)
@@ -202,7 +202,7 @@ class Pembimbing extends BaseController
             'status' => 3
         ];
         $aktivitasModel->update($id, $data);
-        return redirect()->to(base_url('Pembimbing/dataAktivitas'));
+        return redirect()->to(base_url('dashboard/pembimbing/data/aktivitas'));
     }
     public function terimaAktivitasDash($id)
     {
@@ -211,7 +211,7 @@ class Pembimbing extends BaseController
             'status' => 1
         ];
         $aktivitasModel->update($id, $data);
-        return redirect()->to(base_url('Pembimbing'));
+        return redirect()->to(base_url('dashboard/pembimbing/data/aktivitas'));
     }
 
     public function hapusAktivitasDash($id)
@@ -221,7 +221,7 @@ class Pembimbing extends BaseController
             'status' => 3
         ];
         $aktivitasModel->update($id, $data);
-        return redirect()->to(base_url('Pembimbing'));
+        return redirect()->to(base_url('dashboard/pembimbing/data/aktivitas'));
     }
 
     // Buka file proposal

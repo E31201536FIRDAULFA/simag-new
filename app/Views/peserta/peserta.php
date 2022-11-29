@@ -54,32 +54,8 @@
 
             <p id="lokasi"></p>
         </div>
-
-        <!-- lokasi -->
-        <script>
-            var x = document.getElementById("lokasi");
-
-            function getLocation() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                } else {
-                    x.innerHTML = "Geolocation is not supported by this browser.";
-                }
-            }
-
-            function showPosition(position) {
-                $.post(
-                    '/Peserta/addLokasi', {
-                        latitude: position.coords.latitude,
-                        longitude: position.coords.longitude
-                    },
-                    (data) => {
-                        console.log(data)
-                    }
-                )
-            }
-        </script>
-        <script src="/assets/js/clock.js"></script>
+        <script src="<?= base_url('assets/js/absen.js') ?>"></script>
+        <script src="<?= base_url('assets/js/clock.js') ?>"></script>
     </div>
     <!-- /.container-fluid -->
 

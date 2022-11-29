@@ -98,6 +98,9 @@ $routes->group('dashboard', ['filter' => 'authGuard'], function ($routes) {
     // Peserta Routes
     $routes->group('peserta', ['filter' => 'authGuardPeserta'], function ($routes) {
         $routes->get('/', 'Peserta::index');
+        $routes->get('kehadiran', 'Peserta::getKehadiran');
+        $routes->post('tambah/lokasi', 'Peserta::addLokasi');
+        $routes->post('tambah/absen', 'Peserta::addAbsen');
         $routes->get('data/absen', 'Peserta::dataAbsen');
         $routes->get('data/aktivitas/(:num)', 'Peserta::dataAktivitas/$1');
         $routes->add('data/aktivitas/tambah/(:num)', 'Peserta::tambahAktivitas/$1');
@@ -115,6 +118,8 @@ $routes->get('home', 'Home::index');
 $routes->get('login', 'AuthGoogle::index');
 $routes->get('logout', 'AuthGoogle::logout');
 $routes->match(['get', 'post'],'registrasi', 'Registrasi::index');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -36,7 +36,8 @@ class Peserta extends BaseController
         $pagi = [strtotime('04:00:00'), strtotime('12:00:00')];
         $sore = [strtotime('12:01:00'), strtotime('17:00:00')];
 
-        $user = session()->userId;
+        $user = session()->get('id');
+        //dd($user);
         $absenModel = new AbsenModel();
         $absen = $absenModel->where('date', date('Y-m-d'))->where('user_id', $user)->get()->getRowArray();
         if ($timeNow > $pagi[0] && $timeNow < $pagi[1]) {
@@ -103,7 +104,7 @@ class Peserta extends BaseController
     public function addLokasi()
     {
         date_default_timezone_set('Asia/Jakarta');
-        $user = session()->get('user_id');
+        $user = session()->get('id');
         $absenModel = new AbsenModel();
         $absen = $absenModel->where('date', date('Y-m-d'))->where('user_id', $user)->get()->getRowArray();
         $lokasi = [
@@ -183,7 +184,7 @@ class Peserta extends BaseController
         echo view('templates/sidebar');
         echo view('templates/topbar');
         echo view('peserta/detailAbsen.php');
-        echo view('templates/footer');
+        echo view('templates/footer');  
     }
     public function dataAktivitas($id)
     {
@@ -242,7 +243,7 @@ class Peserta extends BaseController
             $aktivitasModel = new AktivitasModel();
             $aktivitasModel->save($aktivitas);
             session()->setFlashdata('success', 'Sukses! Laporan aktivitas harian berhasil ditambahkan.');
-            return redirect()->to(base_url('dashboard/peserta/data/aktivitas'));
+            return redirect()->to(base_url('dashboard/peserta/data/aktivitas/'.$id));
         }
         echo view('templates/header');
         echo view('templates/sidebar');

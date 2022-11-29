@@ -1,0 +1,122 @@
+ERROR - 2022-11-29 04:13:47 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\simag-new\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\simag-new\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', 'root', 'simag', 3306, '', 0)
+#1 D:\simag-new\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\simag-new\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\simag-new\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\simag-new\vendor\codeigniter4\framework\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\simag-new\app\Controllers\Home.php(14): CodeIgniter\Model->__call('get', Array)
+#6 D:\simag-new\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Home->index()
+#7 D:\simag-new\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\simag-new\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\simag-new\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\simag-new\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\simag-new\\pu...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\simag-new\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\simag-new\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\simag-new\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\simag-new\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\simag-new\vendor\codeigniter4\framework\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\simag-new\app\Controllers\Home.php(14): CodeIgniter\Model->__call('get', Array)
+#5 D:\simag-new\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Home->index()
+#6 D:\simag-new\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\simag-new\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\simag-new\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\simag-new\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\simag-new\\pu...')
+#10 {main}
+CRITICAL - 2022-11-29 04:13:47 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `info_peserta` ON `user`.`id`=`info_peserta`.`userId`
+WHERE `info_peserta`.`endDate` > :info_peserta.endDate:', [...], false)
+ 3 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(14): CodeIgniter\Model->__call('get', [])
+ 5 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-29 04:25:09 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\simag-new\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\simag-new\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', 'root', 'simag', 3306, '', 0)
+#1 D:\simag-new\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\simag-new\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\simag-new\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\simag-new\vendor\codeigniter4\framework\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\simag-new\app\Controllers\Home.php(14): CodeIgniter\Model->__call('get', Array)
+#6 D:\simag-new\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Home->index()
+#7 D:\simag-new\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\simag-new\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\simag-new\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\simag-new\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\simag-new\\pu...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\simag-new\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\simag-new\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\simag-new\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\simag-new\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\simag-new\vendor\codeigniter4\framework\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\simag-new\app\Controllers\Home.php(14): CodeIgniter\Model->__call('get', Array)
+#5 D:\simag-new\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\Home->index()
+#6 D:\simag-new\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\simag-new\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\simag-new\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\simag-new\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\simag-new\\pu...')
+#10 {main}
+CRITICAL - 2022-11-29 04:25:09 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `info_peserta` ON `user`.`id`=`info_peserta`.`userId`
+WHERE `info_peserta`.`endDate` > :info_peserta.endDate:', [...], false)
+ 3 SYSTEMPATH\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(14): CodeIgniter\Model->__call('get', [])
+ 5 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-29 04:51:24 --> Undefined array key 0
+in APPPATH\Views\peserta\statuspengajuan.php on line 12.
+ 1 APPPATH\Views\peserta\statuspengajuan.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\peserta\\statuspengajuan.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\peserta\\statuspengajuan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('peserta/statuspengajuan.php', [], true)
+ 5 APPPATH\Controllers\Notif.php(123): view('peserta/statuspengajuan.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\Notif->dataPengajuan('106')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Notif))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-29 05:01:21 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 102.
+ 1 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-29 05:01:22 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 102.
+ 1 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-29 05:01:23 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 102.
+ 1 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-29 05:01:24 --> syntax error, unexpected variable "$routes"
+in APPPATH\Config\Routes.php on line 102.
+ 1 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 2 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -166,20 +166,20 @@ class Admin extends BaseController
     {
         $userModel = new UserModel();
         $aktif = $userModel->where('role', 3)
-            ->where('status', 1)
+            ->where('status', 2)
             ->join('info_peserta', 'user.id=info_peserta.userId')
             ->where('info_peserta.endDate >=', date('Y-m-d'))
             ->get()
             ->getResultArray();
         $deaktif = $userModel->where('role', 3)
-            ->where('status', 1)
+            ->where('status', 2)
             ->join('info_peserta', 'user.id=info_peserta.userId')
             ->where('info_peserta.endDate <=', date('Y-m-d'))
             ->get()
             ->getResultArray();
         $pendaftar = $userModel->where('role', 3)
             ->join('info_peserta', 'user.id=info_peserta.userId')
-            ->where('status', 2)
+            ->where('status', 1)
             ->get()
             ->getResultArray();
 
